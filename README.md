@@ -6,7 +6,7 @@
 
 *LASTIG, Univ Gustave Eiffel · IGN · ENSG · CNES · LIGM, École des Ponts ParisTech · Google Switzerland*
 
-[![Paper](https://img.shields.io/badge/paper-coming%20soon-red)](#paper) [![Project Page](https://img.shields.io/badge/project-page-coming%20soon-blue)](#project-page) [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+[![Paper](https://img.shields.io/badge/paper-coming%20soon-red)](#paper) [![Project Page](https://img.shields.io/badge/project-page-gastruc.github.io%2Funigeoclip-blue)](https://gastruc.github.io/unigeoclip) [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 ---
 
@@ -98,7 +98,7 @@ Increasing encoder depth yields consistent gains across all retrieval tasks:
 | 8 | 73.1 | 44.0 | 27.8 |
 | **12** | **74.4** | **47.0** | **29.2** |
 
-See the [paper](#) and [project page](#) for full results across all tasks and modalities.
+See the [paper](#) and [project page](https://gastruc.github.io/unigeoclip) for full results across all tasks and modalities.
 
 ---
 
