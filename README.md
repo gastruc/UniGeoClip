@@ -6,7 +6,7 @@
 
 *LASTIG, Univ Gustave Eiffel · IGN · ENSG · CNES · LIGM, École des Ponts ParisTech · Google Switzerland*
 
-[![Paper](https://img.shields.io/badge/paper-coming%20soon-red)](#paper) [![Project Page](https://img.shields.io/badge/project-page-gastruc.github.io%2Funigeoclip-blue)](https://gastruc.github.io/unigeoclip) [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+[![Paper](https://img.shields.io/badge/paper-coming%20soon-red)](#paper) [![Website](https://img.shields.io/badge/website-live-success)](https://gastruc.github.io/unigeoclip) [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 ---
 
