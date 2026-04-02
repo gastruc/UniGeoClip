@@ -54,11 +54,19 @@ class LocationEncoder(nn.Module):
         self.registers = nn.Parameter(torch.empty(n_registers, embed_dim))
         nn.init.normal_(self.registers, std=0.02)
 
-        self.blocks = nn.ModuleList(
-            [
-                Block(embed_dim, num_heads=num_heads, mlp_ratio=mlp_ratio)
-                for _ in range(depth)
-            ]
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=embed_dim,
+            nhead=num_heads,
+            dim_feedforward=int(embed_dim * mlp_ratio),
+            dropout=0.0,
+            activation="gelu",
+            batch_first=False,
+            norm_first=True,
+        )
+        self.transformer = nn.TransformerEncoder(
+            encoder_layer=encoder_layer,
+            num_layers=depth,
+            enable_nested_tensor=False,
         )
 
     def forward(self, location):
@@ -74,8 +82,7 @@ class LocationEncoder(nn.Module):
         )
         tokens = torch.cat([registers, location_features], dim=1)
 
-        for block in self.blocks:
-            tokens = block(tokens)
+        tokens = self.transformer(tokens)
 
         return tokens[:, self.n_registers :, :].mean(dim=1)
 
@@ -97,22 +104,3 @@ class GaussianEncoding(nn.Module):
         vp = 2 * np.pi * v @ self.mat.T
         return torch.cat((torch.cos(vp), torch.sin(vp)), dim=-1)
 
-
-class Block(nn.Module):
-    def __init__(self, d_model, num_heads, mlp_ratio, dropout=0.0):
-        super(Block, self).__init__()
-        self.self_attn = nn.MultiheadAttention(d_model, num_heads, dropout=dropout)
-        self.feed_forward = nn.Sequential(
-            nn.Linear(d_model, int(d_model * mlp_ratio)),
-            nn.GELU(),
-            nn.Linear(int(d_model * mlp_ratio), d_model),
-        )
-        self.norm1 = nn.LayerNorm(d_model)
-        self.norm2 = nn.LayerNorm(d_model)
-        self.dropout = nn.Dropout(dropout)
-
-    def forward(self, x):
-        normed_x = self.norm1(x)
-        x = x + self.dropout(self.self_attn(normed_x, normed_x, normed_x)[0])
-        x = x + self.dropout(self.feed_forward(self.norm2(x)))
-        return x

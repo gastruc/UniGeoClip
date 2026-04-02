@@ -78,7 +78,7 @@ print(embeddings.shape)  # torch.Size([3, 768])
 
 ## Results
 
-UniGeoCLIP's location encoder achieves a mean **R² = 57.0** across **27** downstream regression tasks (health, socio-economic, and environmental indicators), outperforming all contrastive baselines:
+UniGeoCLIP's location encoder achieves a mean **R² = 57.0** on the [PDFM (Population Dynamics Foundation Model)](https://github.com/google-research/population-dynamics) benchmark across **27** downstream regression tasks (health, socio-economic, and environmental indicators), outperforming all contrastive baselines:
 
 | Model | Mean R² |
 |---|---:|
@@ -126,5 +126,5 @@ The code in this repository is released under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-This code build on top of prior work and code from [Geoclip](https://github.com/VicenteVivan/geo-clip/tree/main)
+This code builds on top of prior work and code from [GeoCLIP](https://github.com/VicenteVivan/geo-clip/tree/main)
 
