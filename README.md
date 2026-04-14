@@ -2,11 +2,11 @@
 
 **EarthVision Workshop @ CVPR 2026**
 
-**Authors:** [Guillaume Astruc](https://github.com/) · [Eduard Trulls](https://github.com/) · [Jan Hosang](https://github.com/) · [Loïc Landrieu](https://github.com/) · [Paul-Edouard Sarlin](https://github.com/)
+**Authors:** [Guillaume Astruc](https://gastruc.github.io/) · [Eduard Trulls](https://etrulls.github.io/) · [Jan Hosang](https://janhosang.com/) · [Loïc Landrieu](https://loiclandrieu.com/) · [Paul-Edouard Sarlin](https://psarlin.com/)
 
 *LASTIG, Univ Gustave Eiffel · IGN · ENSG · CNES · LIGM, École des Ponts ParisTech · Google Switzerland*
 
-[![Paper](https://img.shields.io/badge/paper-coming%20soon-red)](#paper) [![Website](https://img.shields.io/badge/website-live-success)](https://gastruc.github.io/unigeoclip) [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+[![Paper](https://img.shields.io/badge/paper-coming%20soon-red)](https://arxiv.org/abs/2604.11668) [![Website](https://img.shields.io/badge/website-live-success)](https://gastruc.github.io/unigeoclip) [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 ---
 
@@ -98,7 +98,7 @@ Increasing encoder depth yields consistent gains across all retrieval tasks:
 | 8 | 73.1 | 44.0 | 27.8 |
 | **12** | **74.4** | **47.0** | **29.2** |
 
-See the [paper](#) and [project page](https://gastruc.github.io/unigeoclip) for full results across all tasks and modalities.
+See the [paper](https://arxiv.org/pdf/2604.11668) and [project page](https://gastruc.github.io/unigeoclip) for full results across all tasks and modalities.
 
 ---
 
