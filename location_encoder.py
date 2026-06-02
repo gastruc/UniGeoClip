@@ -60,7 +60,7 @@ class LocationEncoder(nn.Module):
             dim_feedforward=int(embed_dim * mlp_ratio),
             dropout=0.0,
             activation="gelu",
-            batch_first=False,
+            batch_first=True,
             norm_first=True,
         )
         self.transformer = nn.TransformerEncoder(
