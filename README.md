@@ -18,6 +18,12 @@ UniGeoCLIP is a multimodal contrastive framework that jointly aligns five geospa
 
 ---
 
+## Updates
+
+- **[Code released]** The full training and inference code for UniGeoCLIP is now available at [google-research/scaling-geoloc](https://github.com/google-research/scaling-geoloc).
+
+---
+
 ## Location Encoder
 
 The location encoder maps raw latitude/longitude coordinates to a rich D-dimensional embedding by combining multi-scale Random Fourier Features with self-attention.
